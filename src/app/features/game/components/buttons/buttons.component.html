@@ -1,0 +1,18 @@
+<header>
+    <button (click)="doTurnLeft()">
+        <span class="material-symbols-outlined">rotate_left</span>
+        <span>Rotate Left</span>
+    </button>
+    <button (click)="doTurnRight()">
+        <span class="material-symbols-outlined">rotate_right</span>
+        <span>Rotate Right</span>
+    </button>
+    <button (click)="doAdvance()">
+        <span class="material-symbols-outlined">straight</span>
+        <span>Advance</span>
+    </button>
+    <button (click)="doShoot()">
+        <span class="material-symbols-outlined" (click)="doShoot()">chip_extraction</span>
+        <span>Fire arrow!</span>
+    </button>
+</header>

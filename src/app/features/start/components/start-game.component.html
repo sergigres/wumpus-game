@@ -1,0 +1,23 @@
+<ng-container>
+  <form [formGroup]="form" (ngSubmit)="startGame()">
+    <div class="row">
+      <label>Player name</label>
+      <input type="text" formControlName="playerName">
+    </div>
+    <div class="row">
+      <label>Cells x Cells number</label>
+      <input type="number" formControlName="cells">
+  </div>
+  <div class="row">
+    <label>Pits number</label>
+    <input type="number" formControlName="pits">
+  </div>
+  <div class="row">
+    <label>Arrows number</label>
+    <input type="number" formControlName="arrows">
+  </div>
+  <div class="row">
+    <button type="submit">Start!</button>
+  </div>
+  </form>
+</ng-container>

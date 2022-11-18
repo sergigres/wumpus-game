@@ -1,0 +1,9 @@
+<figure [ngClass]="{'visited' : cell.visited, 'wumpus' : cell.hasWumpus, 'pit' : cell.hasPit, 'smell': cell.smells, 'breeze': cell.breeze, 'gold' : cell.hasGold}">
+    <span class="material-symbols-outlined me" *ngIf="cell.player"
+        [ngClass]="{'top' : cell.player.heading === 4, 'bottom' : cell.player.heading === 2, 'left' : cell.player.heading === 3 }">
+        emoji_people
+    </span>
+    <span class="material-symbols-outlined" *ngIf="cell.hasWumpus && gameOver">sentiment_extremely_dissatisfied</span>
+    <span class="material-symbols-outlined" *ngIf="cell.hasPit && gameOver">magnification_large</span>
+    <span class="material-symbols-outlined" *ngIf="cell.hasGold && gameOver">diamond</span>
+</figure>

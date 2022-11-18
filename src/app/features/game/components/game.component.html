@@ -1,0 +1,24 @@
+<h3>Let's find the Wumpus, {{gameConfig.playerName}}!</h3>
+<main>
+    <section class="interaction">
+        <app-buttons (turnLeft)="turnLeft($event)" (turnRight)="turnRight($event)"
+                     (advance)="advance($event)" (shoot)="shoot($event)" *ngIf="!gameOver"></app-buttons>
+        <span class="replay" *ngIf="gameOver" (click)="playAgain()">Play Again!</span>
+        <div class="inventory">
+            <span>Arrows: {{gameConfig.arrows}}</span>
+            <span class="gold" *ngIf="gotGold">Gold!</span>
+        </div>
+        <app-info></app-info>
+    </section>
+    <section>
+        <div class="row" *ngFor="let row of board.rows;">
+            <ng-container *ngFor="let cell of row.cells;">
+                <app-cell [cell]="cell" [gameOver]="gameOver"></app-cell>
+            </ng-container>
+        </div>
+    </section>
+
+    <section>
+    
+    </section>
+</main>
